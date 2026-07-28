@@ -1,3 +1,5 @@
+![GitHub License](https://img.shields.io/github/license/DeadPerquim/POO-ADS-2026_2)
+
 # Programação Orientada a Objetos
 
 > Neste repositório estão todos os ecercícios e laboratórios desenvolvidos na disciplina Programação Orientada a Objetos em ANálise e Desenvolvimento de Sistemas do IFSC, campus São José
