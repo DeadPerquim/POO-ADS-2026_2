@@ -46,13 +46,20 @@ public class Data {
             //     IO.println("ERRO: Valor inválido. Entre com: seg, ter, qua, qui ou sex");
             // }
         }
+        String resposta = "Na disciplina " + disciplina + " você tem aulas nos seguintes dias: ";
+
         for (int j = 0; j < i; j++) {
-            
-            IO.println("Na disciplina " + disciplina + " você tem aulas nos seguintes dias: " + dias[j]);
-            
+            if (j > 0) {
+                resposta += ", ";
+            }
+            resposta += dias[j];
         }
+
+        IO.println(resposta);
     }
-    // Faça um programa que o usuário deve informar:
+}
+
+ // Faça um programa que o usuário deve informar:
     // - Sigla da Diciplina
     // - Todos os dias da semana que tem aula dessa disciplina
     // 
@@ -61,5 +68,3 @@ public class Data {
     // - seg
     // - qua
     // - sex
-
-}

@@ -8,12 +8,12 @@ public class Media {
 
         double media = (nota1 + nota2)/2;
 
-        if (media > 7) {
-            IO.println("A sua Média é " + media + ". " + "Vocẽ está aprovado.");
+        if (media >= 6) {
+            IO.println("A sua Média é " + media + ". " + usuario + " está aprovado.");
             
         }
         else{
-            IO.println("A sua Média é " + media + ". " + "Você está reprovado.");
+            IO.println("A sua Média é " + media + ". " + usuario + " está reprovado.");
         }
 
     }
