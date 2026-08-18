@@ -1,0 +1,13 @@
+Jogo de Formula 1:
+Atributos:
+-Marca Ferrari;
+-Cor vermelho;
+-Pneu de Corrida;
+-Preço é 1.000.000$;
+
+Métodos:
+-Acelerar e freiar;
+-Andar pra trás(dar ré);
+-Virar virar para direita/esquerda;
+-Obter velocidade atual;
+-Puxar freio de mão.

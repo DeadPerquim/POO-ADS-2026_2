@@ -1,0 +1,20 @@
+Monitor
+Atributos:
+-possui tela;
+-possui botões;
+-possui entradas de fonte e de video
+
+Métodos;
+-Ele ligar e desligar;
+-é possível conectar e remover cabos;
+
+
+Tomada
+Atributos:
+-possui energia elétrica;
+-possui uma entrada;
+-é da cor branca;
+
+Métodos
+-dá pra conectar qualquer cabo de tomada;
+-dá pra estourar a tomada.
