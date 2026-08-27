@@ -9,13 +9,12 @@ public class App {
         int vida = Integer.parseInt(IO.readln("Entre com o valor da vida: "));
         mago.definirVida(vida);
 
-        int mana = Integer.parseInt(IO.readln("Entre com o valor da vida: "));
+        int mana = Integer.parseInt(IO.readln("Entre com o valor da mana: "));
         mago.definirMana(mana);
 
         int forca = Integer.parseInt(IO.readln("Entre com o valor da força: "));
         mago.definirForca(forca);
-        IO.println("Vida: " + vida);
-        IO.println("Mana: " + mana);
-        IO.println("Força: " + forca);
+
+        IO.println(mago.obterStatus());
     }
 }
