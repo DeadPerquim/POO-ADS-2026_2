@@ -5,12 +5,11 @@ package ads.poo;
 
 public class App {
     public static void main(String[] args){
-        Caneta a = new Caneta(100, "azul");
+        Caneta a = new Caneta(50, "azul");
         Caneta b = new Caneta(50); // 50, azul
         Caneta c = new Caneta(); // 100, azul
-
-        a.setCor("verde");
-
         IO.println(a);
+
+        System.out.printf("Nivel de tinta apos desenhar: %.4f%n", a.desenhar(1,1,216,321));
     }
 }
