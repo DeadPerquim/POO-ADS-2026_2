@@ -4,6 +4,7 @@
 package ads.poo;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class App {
     public static void main(String[] args) {
@@ -45,6 +46,46 @@ public class App {
         agenda.removeIf( p -> p.getNome().equals("Juca"));
 
         agenda.forEach(IO::println);
+
+        //(chave, valor) mapeamento da chave para o valor
+        //chave é o indice para chegar no valor
+        //chave é única na coleção
+
+        HashMap<String, String> mapa = new HashMap<>();
+
+        //HashMap<String, Pessoa> mapa = new HashMap<>();
+        //mapa.put("123", new Pessoa("Juca", "juca@example.org"));
+
+
+        mapa.put("123", "Juca");
+        mapa.put("456", "Ana");
+        mapa.put("789", "Pedro");
+        mapa.put("789", "Paulo");
+
+        String nome = mapa.get("456");
+
+        //String nome = mapa.get("888");
+
+        if (nome == null) {
+            IO.println("Valor não encontrado. ");
+        } else {
+            IO.println(nome);
+        }
+
+
+        //Maneira mais consiza de percorrer o HashMap
+        mapa.forEach((chave, valor)-> IO.println("chave: " + chave + ", valor: " + valor));
+
+        //Outra maneira de Percorrer o HashMap
+        for (var elemento : mapa.entrySet()){
+            IO.println("chave: " + elemento.getKey());
+            IO.println("valor: " + elemento.getValue());
+        }
+
+        mapa.remove("456"); // remoção pela chave
+
+        mapa.values().removeIf(v->v.equals("Juca")); // remove todos com valor igual
+        // Juca
 
     }
 }
