@@ -6,6 +6,7 @@ package ads.poo;
 public class App {
 
     private Pessoa[] vetor = new Pessoa[100];
+    int quantidade = 0;
     public void menu(){
         String msg = """
                 1 - Cadastrar Pessoas
@@ -19,13 +20,49 @@ public class App {
             IO.println(msg);
             int escolha = Integer.parseInt(IO.readln());
             switch(escolha){
+                case (1) -> cadastrarPessoa();
+                case (2) -> listarPessoas();
+                case (3) -> imprimirPessoa();
+                case (4) -> {
+                    IO.println("Saindo do sistema!");
+                    return;}
             }
 
         }
     }
     // Entre com a opção; 1
     // switch
+    public void cadastrarPessoa(){
+        String nomeDigitado = IO.readln("Digite o nome da pessoa: ");
+        String emailDigitado = IO.readln("Digite o Email da pessoa: ");
+        Pessoa pessoa = new Pessoa(nomeDigitado, emailDigitado);
+        vetor[quantidade] = pessoa;
+        quantidade++;
+    }
 
+    public void listarPessoas(){
+        for (int i = 0; i < quantidade; i++) {
+            String s = String.format("| %05d | %30s |", vetor[i].getId(), vetor[i].getNome());
+            IO.println(s);
+        }
+    }
+
+    public void imprimirPessoa(){
+        int id = Integer.parseInt(IO.readln("Escreva o Id da pessoa: "));
+        boolean encontrou = false;
+        for (int i = 0; i < quantidade; i++) {
+            if (vetor[i].getId() == id){
+                IO.println(vetor[i]);
+                encontrou = true;
+                break;
+
+            }
+
+        }
+        if (!encontrou){
+            IO.println("Pessoas não encontrada!");
+        }
+    }
 
     public static void main(String[] args) {
         // id é estático, logo é atributo da classe
@@ -36,7 +73,6 @@ public class App {
         // | 00010 | Ana |
         // | 00100 | Joao Pedro |
 
-        //String s = String.format("| %05d | %30s |", id, nome);
 
     }
 }
