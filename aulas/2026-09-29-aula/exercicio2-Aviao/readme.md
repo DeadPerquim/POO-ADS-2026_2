@@ -6,7 +6,7 @@ classDiagram
         - int capMaxCombustivel
         - boolean aviaoLigado
         - Arraylist~Motor~ motores
-        + Aviao(nMaxTri: int, nMaxPas: int, capMaxComb: int, Motor motores)
+        + Aviao(nMaxTri: int, nMaxPas: int, capMaxComb: int, motores: ArrayList~Motor~)
         + ligarDesligarAviao() boolean
         + ligarDesligarMotorIndividual(motor: int)
     }
@@ -17,5 +17,5 @@ classDiagram
         + ligarMotor() boolean
         + desligarMotor() boolean
     }
-Aviao "1" ..> "1..8" Motor 
+Aviao "1" *-- "1..8" Motor 
 ```
