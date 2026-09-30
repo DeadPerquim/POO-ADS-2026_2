@@ -5,9 +5,9 @@ public class Motor {
     private int giroAtual;
     private int cilindros;
 
-    public Motor(int hp, int giroAtual, int cilindros) {
+    public Motor(int hp, int cilindros) {
         this.hp = hp;
-        this.giroAtual = giroAtual;
+        this.giroAtual = 0;
         this.cilindros = cilindros;
     }
 
