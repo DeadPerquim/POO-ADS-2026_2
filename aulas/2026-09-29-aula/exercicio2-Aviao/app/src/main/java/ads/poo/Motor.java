@@ -1,7 +1,7 @@
 package ads.poo;
 
 public class Motor {
-    private  boolean turbinaOuHelice;
+    private boolean turbinaOuHelice;
     private boolean ligado;
 
     public Motor(boolean turbinaOuHelice){

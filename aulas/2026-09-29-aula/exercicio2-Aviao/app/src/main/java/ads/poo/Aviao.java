@@ -9,11 +9,16 @@ public class Aviao {
     private boolean aviaoLigado;
     private ArrayList<Motor> motores;
 
-    public Aviao(int numMaxTripulantes, int numMaxPassageiros, int capMaxComnusitvel, ArrayList<Motor> motores) {
+    public Aviao(int numMaxTripulantes, int numMaxPassageiros, int capMaxComnusitvel, int totalDeMotores, boolean turbinaOuHelice) {
         this.numMaxTripulantes = numMaxTripulantes;
         this.numMaxPassageiros = numMaxPassageiros;
         this.capMaxComnusitvel = capMaxComnusitvel;
-        this.motores = motores;
+        this.motores = new ArrayList<>();
+        for (int i = 0; i < totalDeMotores; i++) {
+            this.motores.add(new Motor(turbinaOuHelice));
+
+
+        }
     }
 
     public boolean ligarDesligarAviao(boolean estadoDoMotor) {
