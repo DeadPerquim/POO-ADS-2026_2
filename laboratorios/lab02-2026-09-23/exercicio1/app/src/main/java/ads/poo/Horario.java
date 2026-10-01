@@ -60,4 +60,52 @@ public class Horario {
     public String toString() {
         return String.format("%02d:%02d:%02d", hora, minuto, segundo);
     }
+
+    public String numeroPorExtenso(int n){
+        switch(n){
+            case 0: return "zero";
+            case 1: return "um";
+            case 2: return "dois";
+            case 3: return "tres";
+            case 4: return "quatro";
+            case 5: return "cinco";
+            case 6: return "seis";
+            case 7: return "sete";
+            case 8: return "oito";
+            case 9: return "nove";
+            case 10: return "dez";
+            case 11: return "onze";
+            case 12: return "doze";
+            case 13: return "treze";
+            case 14: return "catorze";
+            case 15: return "quinze";
+            case 16: return "dezesseis";
+            case 17: return "dezessete";
+            case 18: return "dezoito";
+            case 19: return "dezenove";
+        }
+
+        int dezena = n / 10;
+        int unidade = n % 10;
+        String extensoDezena = "";
+        switch(dezena){
+            case 20 -> extensoDezena = "vinte";
+            case 30 -> extensoDezena = "trinta";
+            case 40 -> extensoDezena = "quarenta";
+            case 50 -> extensoDezena = "cinquenta";
+        }
+
+        return (unidade == 0) ? extensoDezena : extensoDezena + " e " + numeroPorExtenso(unidade);
+    }
+    public String porExtenso(){
+        return numeroPorExtenso(hora) + " horas e "+ numeroPorExtenso(minuto) + " minutos e " + numeroPorExtenso(segundo) + " segundo";
+    }
+
+    public long emSegundos(){
+        return hora * 3600L + minuto * 60L + segundo;
+    }
+
+    public long diferenca(Horario outro){
+        return emSegundos() - outro.emSegundos();
+    }
 }
