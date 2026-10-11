@@ -53,25 +53,3 @@ classDiagram
     }
 ```
 
-```mermaid
-classDiagram
-    class Agenda{
-        
-    }
-    
-    class Contato{
-        
-    }
-    
-    class Telefone{
-        
-    }
-    class Email{
-        
-    }
-    
-    Contato "1..*" o-- "1" Telefone
-    Contato "1..*" o-- "1" Email
-    
-    
-```
