@@ -3,7 +3,7 @@ classDiagram
     
     class App{
         - agenda: Agenda
-        <u>+ main()</u>
+        + main()
         + menu()
     }
     class Agenda{
@@ -28,7 +28,7 @@ classDiagram
         - dataNasc: LocalDate
         - telefones: HashMap~String~Telefone~
         - emails: HashMap~String~Email~
-        + Contato(nome: String, sobrenome: String, dN: LocalDate)+
+        + Contato(nome: String, sobrenome: String, dN: LocalDate)
         + addTelefone(rotulo: String, valor: String) boolean
         + addEmail(rotulo: String, valor: String) boolean
         + removeTelefone(rotulo: String) boolean
@@ -57,4 +57,4 @@ classDiagram
     Contato "1" *-- "0..*" Email
     
     
-```
+``` 
