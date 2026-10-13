@@ -17,4 +17,12 @@ public class Email {
     public String toString() {
         return this.valor;
     }
+
+    public String getValor() {
+        return valor;
+    }
+
+    public void setValor(String valor) {
+        this.valor = valor;
+    }
 }

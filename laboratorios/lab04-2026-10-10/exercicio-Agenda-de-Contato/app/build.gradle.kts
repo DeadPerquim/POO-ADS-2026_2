@@ -41,3 +41,12 @@ tasks.named<Test>("test") {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
 }
+
+tasks.withType<JavaCompile> {
+    options.encoding = "UTF-8"
+}
+
+tasks.run.configure {
+    standardInput = System.`in`
+    jvmArgs("-Dfile.encoding=UTF-8")
+}
