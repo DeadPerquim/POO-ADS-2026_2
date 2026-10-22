@@ -73,13 +73,32 @@ classDiagram
 classDiagram
     class Veiculo{
         - tipoDeVeiculo: String
+        - velocidadeAtual: int
+        + acelerar(v : int) void
+        + frear(v: int) void
     }
     
     class Carro{
-        - QtdRodas: int
+        - tipo : String
         
     }
     class Caminhao{
         - blindagem : boolean
+        - basculanteAberta : boolean
     }
+    
+    class Barco{
+        - tamanho : int
+        - ancora : boolean
+        + lancaAncora(): boolean
+    }
+    class Aviao{
+        - tipoDoMotor : String
+        + ativarFlap(altura: int) void
+    }
+    
+    Veiculo <|-- Carro
+    Veiculo <|-- Caminhao
+    Veiculo <|-- Barco
+    Veiculo <|-- Aviao
 ```
