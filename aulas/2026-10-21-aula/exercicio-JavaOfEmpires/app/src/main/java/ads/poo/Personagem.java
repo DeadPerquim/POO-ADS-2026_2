@@ -1,6 +1,6 @@
 package ads.poo;
 
-public class Personagem {
+public abstract class Personagem {
     private int vida;
     private int ataque;
     private double velocidade;
@@ -11,15 +11,9 @@ public class Personagem {
         this.velocidade = velocidade;
     }
 
-    public String atacar(){
-        return "";
 
-    }
 
-    public String mover(){
-        return "";
-
-    }
+    public abstract String mover();
 
     @Override
     public String toString() {
