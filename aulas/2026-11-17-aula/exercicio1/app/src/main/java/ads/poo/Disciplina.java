@@ -9,6 +9,22 @@ public class Disciplina {
         this.dias = dias;
     }
 
+    public String getSigla() {
+        return sigla;
+    }
+
+    public void setSigla(String sigla) {
+        this.sigla = sigla;
+    }
+
+    public DiaDaSemana[] getDias() {
+        return dias;
+    }
+
+    public void setDias(DiaDaSemana[] dias) {
+        this.dias = dias;
+    }
+
     @Override
     public String toString() {
         String frase = "Sigla: " + sigla + "\n"

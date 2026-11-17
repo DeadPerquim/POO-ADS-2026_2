@@ -3,6 +3,8 @@
  */
 package ads.poo;
 
+import java.util.ArrayList;
+
 public class App {
     public static void main(String[] args) {
         Disciplina poo = new Disciplina("POO",
@@ -11,9 +13,26 @@ public class App {
                 new DiaDaSemana[]{DiaDaSemana.QUARTA, DiaDaSemana.SEXTA});
         Disciplina tes = new Disciplina("TES",
                 new DiaDaSemana[]{DiaDaSemana.TERCA});
-        IO.println(poo);
-        IO.println(est);
-        IO.println(tes);
+        ArrayList<Disciplina> disciplinas = new ArrayList<>();
+        disciplinas.add(poo);
+        disciplinas.add(est);
+        disciplinas.add(tes);
+
+        for (int i = 0; i < disciplinas.size(); i++) {
+            boolean presenteTerca = false;
+            DiaDaSemana[] diasDaSemana = disciplinas.get(i).getDias();
+
+            for (int j = 0; j < diasDaSemana.length; j++) {
+
+                if (diasDaSemana[j].equals(DiaDaSemana.TERCA)) {
+                    presenteTerca= true;
+                }
+            }
+            if (presenteTerca){
+                IO.println(disciplinas.get(i));
+            }
+
+        }
 
 
 
